@@ -24,7 +24,7 @@
         position: absolute;
         background-size: cover;
         z-index: -1000;
-        animation: move 40s linear/*ease-in-out*/;
+        animation: move 90s linear/*ease-in-out*/;
         animation-iteration-count: infinite;
         animation-direction: alternate;
     }
@@ -37,12 +37,12 @@
     }
     @keyframes move {
         0% {
-            background: url('mountains.jpg') 0px 0px;
+            background: url('mountains.jpg') 0% 0%;
             background-size: cover;
             /* transform: translate3d(0,0,0); */
         }
         100% {
-            background: url('mountains.jpg') 100% 0px;
+            background: url('mountains.jpg') 100% 0%;
             background-size: cover;
             /* transform: translate3d(-412.5px,0,0); */
         } 
