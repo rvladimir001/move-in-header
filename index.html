@@ -59,7 +59,8 @@
         
 			<div class='event' id="block_1">
 				<div class="eventHeader">Одностраничный сайт</div>
-				<div class='eventInfo'>Информационный сайт о вашем бизнесе, который будет работать на вас и приводить нужных клиентов.
+				<div class='eventInfo'>Или сайт-визитка о вашем бизнесе, который будет работать на вас и приводить нужных клиентов.<br/>
+          <div class='sale'>от 3000р</div>
 				</div>
 			</div>
 			
@@ -165,6 +166,7 @@
         transform: rotate(0deg);
         -webkit-transition: all 0.25s ease-in-out;
         transition: all 0.25s ease-in-out;
+        z-index: 10;
       }
       .navBurger:before, .navBurger:after {
         content: "";
@@ -178,17 +180,21 @@
         transform: rotate(0deg);
         -webkit-transition: all 0.5s ease;
         transition: all 0.5s ease;
+        z-index: 10;
       }
       .navBurger:before {
         top: -10px;
+        z-index: 10;
       }
       .navBurger:after {
         bottom: -10px;
         width: 90%;
+        z-index: 10;
       }
       .navBurger.active {
         background: transparent;
         background-clip: content-box;
+        z-index: 10;
       }
       .navBurger.active:before {
         -webkit-transform: rotate(135deg);
@@ -196,6 +202,7 @@
         top: 0;
         background: #eee;
         width: 110%;
+        z-index: 10;
       }
       .navBurger.active:after {
         bottom: 0;
@@ -203,6 +210,7 @@
         transform: rotate(-135deg);
         background: #eee;
         width: 110%;
+        z-index: 10;
       }
       .overlay {
         position: fixed;
@@ -217,12 +225,13 @@
         visibility: hidden;
         transition: all 0.4s ease-in-out;
         overflow: hidden;
-        /*z-index: 12;*/
+        z-index: 10;
       }
       .overlay.open {
         opacity: 0.95;
         visibility: visible;
         transform: scale(1);
+        z-index: 10;
       }
       .overlay.open li {
         display: block;
@@ -230,6 +239,7 @@
         animation-delay: 0.4s;
         transform: rotate(-7deg);
         transform-origin: right bottom;
+        z-index: 10;
       }
       .overlay.open li:nth-of-type(2) {
         animation-delay: 0.5s;
@@ -248,6 +258,7 @@
         text-align: right;
         right: 10vw;
         top: 5vw;
+        z-index: 10;
       }
       .overlayMenu ul {
         list-style: none;
@@ -256,12 +267,14 @@
         display: block;
         position: relative;
         height: 100%;
+        z-index: 10;
       }
       .overlayMenu ul li {
         display: block;
         position: relative;
         opacity: 0;
         width: 100%;
+        z-index: 10;
       }
       .overlayMenu ul li a {
         display: inline-block;
@@ -272,15 +285,18 @@
         padding: 10px 40px 10px 40px;
         margin: 5px 0;
         transition: 0.2s;
+        z-index: 10;
       }
       .overlayMenu ul li a:hover, .overlayMenu ul li a:active, .overlayMenu ul li a:focus {
         transform: translateX(-2px);
         padding-left: 80px;
         outline: 1px solid rgba(255, 255, 255, 0.3);
         background: rgba(255, 255, 255, 0.03);
+        z-index: 10;
       }
       .locked {
         overflow: hidden;
+        z-index: 10;
       }
       @keyframes fadeInRight {
         0% {
@@ -343,6 +359,12 @@
 .eventTime {
 	margin-left: 20px;
 	display: block;
+}
+.sale {
+  text-align: center;
+  margin: 30px auto;
+  font-size: 30px;
+  color: green;
 }
       
 </style>
