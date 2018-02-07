@@ -11,29 +11,31 @@
     <!-- <link rel="shortcut icon" href="icon.ico" type="image/x-icon"> -->
 </head>
 <body>
+
+
     <header>
-        
-<div class="overlay">
+        <div class="overlay">
         <nav class="overlayMenu">  
             <ul role="menu">
                 <li><a href="#" role="menuitem">Главная</a></li>
                 <li><a href="#" role="menuitem">Зачем Вам сайт?</a></li>
-                <li><a href="#" role="menuitem">Услуги</a></li>
-                <li><a href="#" role="menuitem">Цены</a></li>
+                <li><a href="#" role="menuitem">Услуги и цены</a></li>
+                <!--<li><a href="#" role="menuitem">Цены</a></li>-->
                 <li><a href="#" role="menuitem">Контакты</a></li>
             </ul>
         </nav>
     </div>
-    <div class='navBorder'>
+
         <div class="navBurger" role="navigation" id="navToggle"></div> 
-    </div>
-      <div class='bar'><div></div><div></div><div></div></div>
-      <div class='tagline'>
-        <h1>РАЗРАБОТКА САЙТОВ ПОД КЛЮЧ</h1>
-        <h2>Cобственный сайт – самая кратчайшая дорога к вершинам успеха в бизнесе!</h2>
-    </div>
+      <div class="background">
+            <div class='tagline'>
+              <h1>РАЗРАБОТКА САЙТОВ ПОД КЛЮЧ</h1>
+              <h2>Cобственный сайт – самая кратчайшая дорога к вершинам успеха в бизнесе!</h2>
+            </div>
+      </div>
     </header>
     <article>
+      <h2>Зачем Вам нужен сайт?</h2>
     <ul>Веб-сайт – это не обособленный объект, отдельный от вашего бизнеса. Он всегда является элементом цепочки коммуникаций с потребителем. Есть несколько основных моделей коммерческих сайтов
         <li>Для привлечения клиентов</li>
         <li>Для развития существующего офлайн бизнеса</li>
@@ -42,13 +44,42 @@
         <li>Для размещения рекламы</li>
         <li>Для продажи доступов к аудитории сайта</li>
     </ul>
-    Самое главное – это привлечь как можно больше потенциальных клиентов.  Поэтому одновременно он должен решать несколько задач:
-    Поддерживать и продвигать имидж компании
-    Предоставлять подробную информацию о товарах/услугах фирмы
-    Обеспечивать качественную рекламу кампании в интернет
-    Привлекать новых партнеров или поставщиков
-    Продавать услуги/товары через сайт компании
+    <ul>
+        Самое главное – это привлечь как можно больше потенциальных клиентов.  Поэтому одновременно он должен решать несколько задач:
+        <li>Поддерживать и продвигать имидж компании</li>
+        <li>Предоставлять подробную информацию о товарах/услугах фирмы</li>
+        <li>Обеспечивать качественную рекламу кампании в интернет</li>
+        <li>Привлекать новых партнеров или поставщиков</li>
+        <li>Продавать услуги/товары через сайт компании</li>
+      </ul>
     </article>
+
+<h2>Услуги и Цены</h2>
+		<div class='eventWrap'>
+        
+			<div class='event' id="block_1">
+				<div class="eventHeader">Одностраничный сайт</div>
+				<div class='eventInfo'>Информационный сайт о вашем бизнесе, который будет работать на вас и приводить нужных клиентов.
+				</div>
+			</div>
+			
+			<div class='event' id="block_2">
+				<div class="eventHeader">Управляемый веб-проект</div>
+				<div class='eventInfo'>
+				</div>
+
+			</div>
+
+			<div class='event' id="block_3">
+				<div class="eventHeader">Индвидуальный проект</div>
+				<div class='eventInfo'>
+				</div>
+
+			</div>
+		</div>
+
+
+
 </body>
 </html>
 <style>
@@ -56,8 +87,13 @@
         margin: 0;
         padding: 0;
         font-family: 'Times New Roman', Times, serif;
+        background-color: #dce6e6;
     }
     header {
+      position: relative;
+      height: 700px;
+    }
+    .background {
         background: url('mountains.jpg') 0px 0px; 
         width: 100%;
         height: 100%;
@@ -69,8 +105,9 @@
         animation-direction: alternate;
     }
     article {
-        position: absolute;
-        margin-top: 50%; 
+        width: 60%;
+        margin: 45px auto;
+
     }
     .tagline {
         margin: 50px auto;
@@ -83,13 +120,16 @@
         text-align: center;
         animation: opac 2s linear;
     }
+
     h2 {
         z-index: 1000;
-        color:aliceblue;
         font-size: 30px;
         text-align: center;
-        animation: opac 3s linear;
-        
+        margin-bottom: 0px;
+    }
+      header h2 {
+      color:aliceblue;
+      animation: opac 3s linear;
     }
     @keyframes opac {
         0% {
@@ -103,12 +143,10 @@
         0% {
             background: url('mountains.jpg') 0% 0%;
             background-size: cover;
-            /* transform: translate3d(0,0,0); */
         }
         100% {
             background: url('mountains.jpg') 100% 0%;
             background-size: cover;
-            /* transform: translate3d(-412.5px,0,0); */
         } 
     }
     .navBurger {
@@ -168,7 +206,7 @@
       }
       .overlay {
         position: fixed;
-        background: #36528e;
+        background: rgb(44, 102, 198);
         top: 0;
         right: 0;
         width: 100%;
@@ -179,6 +217,7 @@
         visibility: hidden;
         transition: all 0.4s ease-in-out;
         overflow: hidden;
+        /*z-index: 12;*/
       }
       .overlay.open {
         opacity: 0.95;
@@ -208,7 +247,7 @@
         position: absolute;
         text-align: right;
         right: 10vw;
-        bottom: 10vw;
+        top: 5vw;
       }
       .overlayMenu ul {
         list-style: none;
@@ -254,6 +293,57 @@
           transform: rotate(0deg);
         }
       }
+
+
+.eventWrap{
+	display: flex;
+	justify-content: center;
+	flex-flow: row wrap;
+}
+
+.eventInfo{
+	font-size: 16px;
+	line-height: 1.5em;
+	width: 215px;
+	padding-top: 55px;
+	max-height: 80px;
+	padding-bottom: 13px;
+}
+
+.eventHeader {
+	font-size: 26px;
+	font-weight: 600;
+	text-align: center;
+	color: black;
+	height: 75px;
+    background: linear-gradient(#fff, #dce6e6);
+	transition: all 0.1s ease 0s;
+	transform: scale(1);
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	top: 0px;
+	-webkit-user-select: none;
+}
+
+.event{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: 0 2px 5px rgba(0,0,0,.3);
+	background: white;
+	padding: 24px 24px 110px 24px;
+	border-radius: 4px;
+	position: relative;
+	min-width: 200px;
+	margin: 20px 15px;
+}
+.eventTime {
+	margin-left: 20px;
+	display: block;
+}
       
 </style>
 <script>
